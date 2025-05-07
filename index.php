@@ -33,7 +33,10 @@ require_once 'components/header.php';
                                 reelSelector: '.viewer .reel',
                                 slidesSelector: '.viewer .reel .slide',
                                 navPreviousSelector: '.navigation .previous',
-                                navNextSelector: '.navigation .next'
+                                navNextSelector: '.navigation .next',
+                                advanceDelay: 3000,     
+                                advanceResume: 3000,   
+                                speed: 600            
                             });
                         </script>
                     </div>
