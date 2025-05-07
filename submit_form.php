@@ -5,5 +5,7 @@ require_once "email.php";
   $message = $_POST['message'];
 
   $headers = "From: ". $email;
- send_email("support@banff.ca", $email, "Feedback from ".$name, $message) 
+ send_email("support@banff.ca", $email, "Feedback from ".$name, $message);
+header("Location: contact.html");
+exit();
 ?>

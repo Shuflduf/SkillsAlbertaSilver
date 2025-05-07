@@ -8,5 +8,6 @@ $time = time();
 
 $sql = 'INSERT INTO prd_reviews (STARS, EXTRA, TIME, PRD_ID) VALUES ('.$stars.','.$extra.','.$time.','.$id.')';
 $result = $conn->query($sql);
-echo $sql;
+header("Location: giftshop.php");
+exit();
 ?>

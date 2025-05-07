@@ -90,6 +90,7 @@ require 'db_connect.php'; ?>
                         LIMIT 1 
                         ";
                         $reviewResult = $conn->query($sql);
+                        
                         echo '<div class="product-entry">';
                           echo '<img src="' . $row["PRD_ImagePath"] . '">';
                           echo '<div class="product-details">';
