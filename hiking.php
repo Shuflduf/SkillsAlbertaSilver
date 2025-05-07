@@ -25,13 +25,11 @@ require 'db_connect.php'; ?>
 				<h2><a>Where every view is a postcard</a></h2>
 			</div>
 			<div id="menu">
-				<ul>
-					<li class="active"><a href="index.html">Homepage</a></li>
-					<li><a href="giftshop.php">Gift Shop</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="hiking.php">Hiking</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+					<div><a href="index.html">Homepage</a></div>
+					<div><a href="giftshop.php">Gift Shop</a></div>
+					<div><a href="about.html">About</a></div>
+          <div class="active"><a href="hiking.php">Hiking</a></div>
+					<div><a href="contact.html">Contact</a></div>
 			</div>
 		</div>
 		<div>

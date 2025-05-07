@@ -426,3 +426,21 @@ a:hover {
 .review-list .time {
   font-size: 0.7em;
 }
+
+/* contact form */ 
+.contact-form {
+  padding-bottom: 15px;
+}
+
+.contact-form-line {
+  width: 50%;
+}
+
+.contact-form-multiline {
+  width: 100%;
+  resize: none;
+}
+
+.contact-form-submit {
+  padding: 5px 10px;
+}

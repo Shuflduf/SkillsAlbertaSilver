@@ -28,7 +28,7 @@ require 'db_connect.php'; ?>
 					<div><a href="index.html">Homepage</a></div>
 					<div class="active"><a href="giftshop.php">Gift Shop</a></div>
 					<div><a href="about.html">About</a></div>
-          <div><a href="hiking.html">Hiking</a></div>
+          <div><a href="hiking.php">Hiking</a></div>
 					<div><a href="contact.html">Contact</a></div>
 			</div>
 		</div>
@@ -60,7 +60,7 @@ require 'db_connect.php'; ?>
 										?>
 										<form method="post">
 											<select name="product_type" onchange="this.form.submit()">
-												<option value="">Select a Product Type</option>
+												<option value="">All Items</option>
 												<?php
 												if ($result->num_rows > 0) {
 													while ($row = $result->fetch_assoc()) {

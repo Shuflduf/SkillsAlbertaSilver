@@ -21,39 +21,36 @@
                 <h1><a href="#">Banff</a></h1>
                 <h2><a>Where every view is a postcard</a></h2>
             </div>
-            <div id="menu">
-                <ul>
-                    <li class="active"><a href="index.html">Homepage</a></li>
-                    <li><a href="giftshop.php">Gift Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="hiking.html">Hiking</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+			<div id="menu">
+					<div><a href="index.html">Homepage</a></div>
+					<div><a href="giftshop.php">Gift Shop</a></div>
+					<div><a href="about.html">About</a></div>
+          <div><a href="hiking.php">Hiking</a></div>
+					<div class="active"><a href="contact.html">Contact</a></div>
+			</div>
         </div>
         <div>
             <div id="page">
                 <div class="inne_copy"></div>
                 <div id="page-bgtop">
                     <div id="content">
-
                         <div class="post">
                             <div class="post-bgtop">
                                 <div class="post-bgbtm">
                                     <h2 class="title"><a href="#">Contact Us</a></h2>
                                     <div class="entry">
-                                        <form action="submit_form.php" method="POST">
+                                        <form action="submit_form.php" method="POST" class="contact-form">
                                             <label for="name">Name:</label><br>
-                                            <input type="text" id="name" name="name" required><br><br>
+                                            <input type="text" id="name" name="name" class="contact-form-line" required><br><br>
 
                                             <label for="email">Email:</label><br>
-                                            <input type="email" id="email" name="email" required><br><br>
+                                            <input type="email" id="email" name="email" class="contact-form-line" required><br><br>
 
                                             <label for="message">Message:</label><br>
-                                            <textarea id="message" name="message" rows="4" cols="50"
+                                            <textarea id="message" name="message" rows="4" cols="50" class="contact-form-multiline"
                                                 required></textarea><br><br>
 
-                                            <input type="submit" value="Submit">
+                                            <input type="submit" value="Submit" class="contact-form-submit">
                                         </form>
                                     </div>
 
