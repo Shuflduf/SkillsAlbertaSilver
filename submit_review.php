@@ -1,0 +1,12 @@
+<?php
+require "db_connect.php";
+
+$stars = $_POST['stars'];
+$extra = '"'.$_POST['extra'].'"';
+$id = $_POST['id'];
+$time = time();
+
+$sql = 'INSERT INTO prd_reviews (STARS, EXTRA, TIME, PRD_ID) VALUES ('.$stars.','.$extra.','.$time.','.$id.')';
+$result = $conn->query($sql);
+echo $sql;
+?>

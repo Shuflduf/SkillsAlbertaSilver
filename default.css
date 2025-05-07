@@ -1,0 +1,428 @@
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.fcenter {
+  float: none;
+  text-align: center;
+}
+.fclear {
+  clear: both;
+}
+.inner_copy {
+  border: 0;
+  color: #f00;
+  float: left;
+  width: 50% !important;
+  margin: -100% 0 0 0;
+  overflow: hidden;
+  line-height: 0;
+  padding: 0;
+  font-size: 11px;
+}
+body {
+  background: #fff url(images/img01.jpg) repeat-x left top;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 11px;
+  color: #757e82;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  color: #aa2808;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+p,
+blockquote,
+ul,
+ol {
+  margin-bottom: 20px;
+  line-height: 2em;
+}
+p {
+}
+blockquote {
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: underline;
+  color: #f40c42;
+}
+a:hover {
+  text-decoration: none;
+  color: #f40c42;
+}
+/* Wrapper */
+#wrapper {
+}
+/* Header */
+#header {
+  width: 900px;
+  height: 140px;
+  margin: 0 auto;
+}
+/* Logo */
+#logo {
+  float: left;
+  width: 270px;
+  height: 76px;
+  margin: 0;
+  padding: 15px 0 0 30px;
+}
+#logo h1 {
+  margin: 0;
+  padding: 0;
+  text-transform: lowercase;
+  font:
+    normal 46px Georgia,
+    "Times New Roman",
+    Times,
+    serif;
+}
+#logo h2 {
+  margin: -4px 0 0 0;
+  padding: 0 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: normal;
+  color: #d9170e;
+}
+#logo h2 a {
+  color: #9aa9b1;
+}
+#logo a {
+  text-decoration: none;
+  color: #d9170e;
+}
+/* Menu */
+.flex {
+  display: flex;
+}
+#menu {
+  float: right;
+  width: 592px;
+  height: 90px;
+  display: flex;
+}
+#menu ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+  line-height: normal;
+  margin-left: 30px;
+}
+#menu li {
+  display: inline;
+  text-align: center;
+}
+#menu a {
+  display: block;
+  float: left;
+  height: 55px;
+  margin-right: 1px;
+  padding: 35px 20px 0 20px;
+  letter-spacing: -1px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #383b3f;
+}
+#menu a:hover,
+#menu .active a {
+  background: #f40c42 url(images/img02.jpg) repeat-x left bottom;
+  color: #fff;
+}
+/* Search */
+#search {
+  padding: 0 0 40px 0;
+}
+#search form {
+  margin: 0;
+  padding: 0;
+}
+#search fieldset {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+#search input {
+  float: left;
+  font:
+    11px Tahoma,
+    Geneva,
+    sans-serif;
+  padding: 2px 2px;
+  border: none;
+}
+#search-text {
+  border: 1px solid #000;
+  color: #000;
+}
+#search-submit {
+  border: none;
+  background: #e71810;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px !important;
+  display: block;
+}
+/* Page */
+#page {
+  width: 900px;
+  margin: 0 auto;
+}
+/* Content */
+#content {
+  float: left;
+  width: 630px;
+}
+.post {
+  background: url(images/img05.jpg) repeat-y left top;
+}
+.post-bgtop {
+  background: url(images/img04.jpg) no-repeat left top;
+}
+.post-bgbtm {
+  background: url(images/img06.jpg) no-repeat left bottom;
+  padding: 50px 40px 30px 40px;
+}
+.post .title {
+  margin: 0;
+  padding: 0 0 5px 0;
+  color: #232f01;
+}
+.post .title a {
+  letter-spacing: -1px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  color: #3a3d40;
+}
+.post .entry {
+}
+.post img {
+  float: left;
+  padding: 15px 0;
+}
+.post .meta {
+}
+.post .more {
+  display: block;
+  width: 115px;
+  height: 32px;
+  padding: 8px 0 0 0;
+  background: url(images/img12.jpg) no-repeat left top;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  color: #fff;
+}
+.post .byline {
+  font-size: 11px;
+  font-style: italic;
+}
+/* Sidebar */
+#sidebar {
+  float: right;
+  width: 260px;
+  background: url(images/img08.jpg) repeat-y left top;
+  font-size: 11px;
+}
+#sidebar-bgtop {
+  background: url(images/img07.jpg) no-repeat left top;
+}
+#sidebar-bgbtm {
+  background: url(images/img09.jpg) no-repeat left bottom;
+  padding: 40px 40px 20px 40px;
+}
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: normal;
+}
+#sidebar li {
+  margin-bottom: 1px;
+}
+#sidebar li ul {
+  margin: 0;
+  padding: 0 0 40px 0;
+}
+#sidebar li li {
+  margin: 0;
+  padding: 7px 0;
+  border: none;
+  background: url(images/img10.jpg) repeat-x left bottom;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+#sidebar li li a {
+  background: url(images/img11.jpg) no-repeat left 3px;
+  padding-left: 20px;
+}
+#sidebar h2 {
+  margin: 0;
+  padding: 0 0 20px 0;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 180%;
+  font-weight: normal;
+  color: #454e55;
+}
+#sidebar h3 {
+  font-size: 77%;
+  color: #454e55;
+}
+#sidebar p {
+  margin: 0;
+  line-height: normal;
+}
+#sidebar a {
+  border: none;
+  text-decoration: none;
+  color: #757e82;
+}
+#sidebar a:hover {
+  text-decoration: underline;
+  color: #363636;
+}
+/* Submenu */
+#submenu {
+}
+/* News */
+#news {
+}
+#news a {
+  font-size: 85%;
+}
+/* Footer */
+#footer-wrapper {
+  background: #f7f7f7 url(images/img03.jpg) repeat-x left top;
+  padding: 20px 0;
+}
+#footer {
+  width: 900px;
+  margin: 0 auto;
+  color: #757e82;
+}
+#footer p {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+}
+#footer a {
+  text-decoration: underline;
+  color: #757e82;
+}
+#footer a:hover {
+  text-decoration: none;
+  color: #f90542;
+}
+
+/* gift shop entries */
+.product-entry {
+  display: flex;
+  padding: 20px;
+  border-top: 1px dashed gray;
+  height: 300px;
+  gap: 20px;
+}
+
+.product-entry img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-entry .product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.product-entry h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.product-entry h2 {
+  text-align: center;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.review-form select,
+.product-entry button {
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block;
+  margin: auto auto 0 auto;
+  cursor: pointer;
+}
+.product-entry button {
+    font-weight: bold;
+  }
+
+.latest-review {
+  margin: auto 0; 
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.latest-review p {
+  margin: 5px 0;
+  line-height: 1.4;
+  font-size: 1.2em;
+}
+
+/* reviews */ 
+.review-form textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 6em;
+  resize: none;
+}
+
+.review-list * {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+.review-list .time {
+  font-size: 0.7em;
+}
