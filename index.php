@@ -11,18 +11,19 @@ require_once 'components/header.php';
                     <div id="gallery-bgbtm">
                         <div id="foobar">
                             <div class="navigation">
-                                <a href="#" class="first">[ &lt;&lt; ]</a> &nbsp; <a href="#" class="previous">[ &lt; ]</a> &nbsp; <a href="#" class="next">[ &gt; ]</a> &nbsp; <a href="#" class="last">[ &gt;&gt; ]</a>
+                                <a href="#" class="previous">‹</a>
+                                <a href="#" class="next">›</a>
                             </div>
                             <div class="viewer">
                                 <div class="reel">
                                     <div class="slide"> <img src="images/img17.jpg" alt="">
-                                        <span>Peacock.</span> </div>
+                                        <span>Moose</span> </div>
                                     <div class="slide"> <img src="images/img18.jpg" alt="">
-                                        <span>Parrot.</span> </div>
+                                        <span>Brown Bear</span> </div>
                                     <div class="slide"> <img src="images/img19.jpg" alt="">
-                                        <span>Parrot.</span> </div>
+                                        <span>Bison</span> </div>
                                     <div class="slide"> <img src="images/img20.jpg" alt="">
-                                        <span>Hummingbird.</span> </div>
+                                        <span>Moose</span> </div>
                                 </div>
                             </div>
                         </div>
@@ -31,10 +32,8 @@ require_once 'components/header.php';
                                 viewerSelector: '.viewer',
                                 reelSelector: '.viewer .reel',
                                 slidesSelector: '.viewer .reel .slide',
-                                navPreviousSelector: '.previous',
-                                navNextSelector: '.next',
-                                navFirstSelector: '.first',
-                                navLastSelector: '.last'
+                                navPreviousSelector: '.navigation .previous',
+                                navNextSelector: '.navigation .next'
                             });
                         </script>
                     </div>

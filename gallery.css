@@ -17,17 +17,37 @@
 #foobar .navigation {
   position: absolute;
   z-index: 100;
-  bottom: 0;
+  top: 0;
+  left: 0;
   right: 0;
-  margin: 15px;
-  padding: 10px 15px;
-  background: rgba(0,0,0,0.7);
-  border-radius: 4px;
+  bottom: 0;
 }
 #foobar .navigation a {
-  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  outline: none;
+  font-size: 32px;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#foobar .navigation a:hover {
+  background: rgba(0, 0, 0, 0.7);
+  width: 70px;
+}
+#foobar .navigation .previous {
+  left: 20px;
+}
+#foobar .navigation .next {
+  right: 20px;
 }
 #foobar .viewer {
   width: 100%;
