@@ -8,8 +8,6 @@ require_once 'components/header.php';
     <div id="page-bgtop">
         <div id="content">
             <div class="post">
-                <div class="post-bgtop">
-                    <div class="post-bgbtm">
                         <h2 class="title"><a href="#">Gift Shop</a></h2>
                         <div class="entry">
                             <?php
@@ -89,8 +87,6 @@ require_once 'components/header.php';
                             $conn->close();
                             ?>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
         <?php require_once 'components/sidebar.php'; ?>

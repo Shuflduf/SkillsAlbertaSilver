@@ -5,38 +5,36 @@ require_once 'components/header.php';
 <div id="page">
     <div id="page-bgtop">
         <div id="content">
-            <div id="gallery-bg">
-                        <div id="foobar">
-                            <div class="navigation">
-                                <a href="#" class="previous">‹</a>
-                                <a href="#" class="next">›</a>
-                            </div>
-                            <div class="viewer">
-                                <div class="reel">
-                                    <div class="slide"> <img src="images/img17.jpg" alt="">
-                                        <span>Moose</span> </div>
-                                    <div class="slide"> <img src="images/img18.jpg" alt="">
-                                        <span>Brown Bear</span> </div>
-                                    <div class="slide"> <img src="images/img19.jpg" alt="">
-                                        <span>Bison</span> </div>
-                                    <div class="slide"> <img src="images/img20.jpg" alt="">
-                                        <span>Moose</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                        <script type="text/javascript">
-                            $('#foobar').slidertron({
-                                viewerSelector: '.viewer',
-                                reelSelector: '.viewer .reel',
-                                slidesSelector: '.viewer .reel .slide',
-                                navPreviousSelector: '.navigation .previous',
-                                navNextSelector: '.navigation .next',
-                                advanceDelay: 3000,     
-                                advanceResume: 3000,   
-                                speed: 600            
-                            });
-                        </script>
+            <div id="foobar">
+                <div class="navigation">
+                    <a href="#" class="previous">‹</a>
+                    <a href="#" class="next">›</a>
+                </div>
+                <div class="viewer">
+                    <div class="reel">
+                        <div class="slide"> <img src="images/img17.jpg" alt="">
+                            <span>Moose</span> </div>
+                        <div class="slide"> <img src="images/img18.jpg" alt="">
+                            <span>Brown Bear</span> </div>
+                        <div class="slide"> <img src="images/img19.jpg" alt="">
+                            <span>Bison</span> </div>
+                        <div class="slide"> <img src="images/img20.jpg" alt="">
+                            <span>Moose</span> </div>
+                    </div>
+                </div>
             </div>
+            <script type="text/javascript">
+                $('#foobar').slidertron({
+                    viewerSelector: '.viewer',
+                    reelSelector: '.viewer .reel',
+                    slidesSelector: '.viewer .reel .slide',
+                    navPreviousSelector: '.navigation .previous',
+                    navNextSelector: '.navigation .next',
+                    advanceDelay: 3000,     
+                    advanceResume: 3000,   
+                    speed: 600            
+                });
+            </script>
             <div class="post">
                         <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
                         <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>

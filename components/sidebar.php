@@ -1,6 +1,4 @@
 <div id="sidebar">
-    <div id="sidebar-bgtop">
-        <div id="sidebar-bgbtm">
             <ul>
                 <li id="search">
                     <h2>Search</h2>
@@ -24,6 +22,4 @@
                     </ul>
                 </li>
             </ul>
-        </div>
-    </div>
 </div>

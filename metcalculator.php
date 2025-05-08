@@ -29,11 +29,32 @@
 
     }
 
+    function calculateInjuryProbability(difficulty, injuriesLast10Years, lengthKM, durationMin) {
+        const baseRisk = {
+            easy: 0.01,
+            medium: 0.03,
+            hard: 0.07
+        };
+
+        let injuryMultiplier = 1 + (injuriesLast10Years / 100);
+        let exposureFactor = (lengthKM * durationMin) / 1000;
+        let riskScore = baseRisk[difficulty] * injuryMultiplier * exposureFactor;
+
+        return Math.max(0, Math.min(riskScore, 1));
+    }
+
 </script>
 
 <?php
 if (is_numeric($selectedHike)) {
-    $sql = "SELECT * FROM HIK_Hikes WHERE HIK_ID=" . $selectedHike;
+    $sql = "SELECT h.*, 
+            COALESCE(SUM(i.Inj_InjuryCount), 0) as total_injuries
+            FROM hik_hikes h 
+            LEFT JOIN INJ_Injuries i ON h.HIK_ID = i.HIK_ID 
+            AND i.INJ_Year >= YEAR(CURDATE()) - 10
+            WHERE h.HIK_ID = " . $selectedHike . "
+            GROUP BY h.HIK_ID";
+
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -44,7 +65,20 @@ if (is_numeric($selectedHike)) {
         $hikeLengthKilometers = $row["HIK_LengthKilometers"]; 
         $hikeElevationGainMeters = $row["HIK_ElevationGainMeters"]; 
         $hikeTimeHours = $row["HIK_TimeLengthMinutes"];     
-
+        $injuries = $row["total_injuries"];
+        $difficulty = strtolower($row["HIK_DifficultyLevel"]);
+?>
+        <script>
+            const riskScore = calculateInjuryProbability(
+                '<?= $difficulty ?>', 
+                <?= $injuries ?>, 
+                <?= $hikeLengthKilometers ?>, 
+                <?= $hikeTimeHours ?>
+            );
+            document.getElementById('riskScore').innerText = 
+                `Risk Score: ${(riskScore * 100).toFixed(1)}%`;
+        </script>
+<?php
     } else {
         echo "Error occured returning selected hike.";
     }
@@ -56,8 +90,6 @@ else
 ?>
 
 <div id="sidebar">
-    <div id="sidebar-bgtop">
-        <div id="sidebar-bgbtm">
         <strong><label><?= $hikeName ?></label></strong><br/>
                 <table>
                     <tr>
@@ -83,6 +115,7 @@ else
                     <tr>
                         <td colspan="2" style="text-align: center;">
                             <button 
+                            class="metcalc-button"
                             onclick="estimateCalories(
                             document.getElementById('distance').value, 
                             document.getElementById('elevation').value, 
@@ -96,8 +129,11 @@ else
                         <label id="caloriesBurned"></label>
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="2">
+                        <label id="riskScore"></label>
+                        </td>
+                    </tr>
                 </table>
             
-        </div>
-    </div>
 </div>

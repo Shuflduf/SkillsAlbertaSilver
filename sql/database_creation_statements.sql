@@ -232,3 +232,13 @@ CREATE TABLE prd_reviews (
   TIME int,
   FOREIGN KEY (PRD_ID) references prd_products(PRD_ID)
 );
+
+-- 
+-- INJURIES 
+-- 
+CREATE TABLE INJ_Injuries (
+  HIK_ID int(11),
+  INJ_Year int,
+  Inj_InjuryCount int,
+  FOREIGN KEY (HIK_ID) references hik_hikes(HIK_ID)
+);

@@ -74,7 +74,10 @@ a:hover {
 }
 /* Header */
 #header {
-  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: none;
+  max-width: 1200px;
   height: 140px;
   margin: 0 auto;
 }
@@ -111,6 +114,9 @@ a:hover {
 #logo a {
   text-decoration: none;
   color: #d9170e;
+}
+.logo-image {
+  height: 50px;
 }
 /* Menu */
 .flex {
@@ -205,7 +211,7 @@ a:hover {
 .post {
   background: white none repeat-x top;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 20px 20px 0 0;
+  margin: 0 20px 0;
   padding: 30px;
   border-radius: 10px;
 }
@@ -261,8 +267,11 @@ a:hover {
 /* Sidebar */
 #sidebar {
   float: right;
-  width: 260px;
-  background: url(images/img08.jpg) repeat-y left top;
+  /* background: url(images/img08.jpg) repeat-y left top; */
+  border-radius: 10px;
+  background: white none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 30px;
   font-size: 11px;
 }
 #sidebar-bgtop {
@@ -334,6 +343,7 @@ a:hover {
 /* Footer */
 #footer-wrapper {
   background: #f7f7f7 url(images/img03.jpg) repeat-x left top;
+  margin-top: 30px;
   padding: 20px 0;
 }
 #footer {
@@ -392,11 +402,14 @@ a:hover {
   margin: 0 0 20px 0;
 }
 
+select {
+  padding: 5px;
+  padding-right: 30px;
+}
 .review-form select,
 .product-entry button {
-  padding: 5px;
-  padding-left: 30px;
   padding-right: 30px;
+  padding-left: 30px;
   display: block;
   margin: auto auto 0 auto;
   cursor: pointer;
@@ -450,4 +463,18 @@ a:hover {
 
 .contact-form-submit {
   padding: 5px 10px;
+}
+/* hike */ 
+.hike-entry {
+  padding: 20px;
+  border: 1px dashed gray;
+  border-radius: 10px;
+}
+.hike-entry p {
+  margin-bottom: 0;
+}
+.metcalc-button {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 20px 0 0 0;
 }
