@@ -3,20 +3,12 @@
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-  margin: 0;
   padding: 20px;
-}
-#gallery-bgtop {
-  background: url(images/img04.jpg) no-repeat left top;
-}
-#gallery-bgbtm {
-  background: url(images/img06.jpg) no-repeat left bottom;
-  padding: 50px 40px;
 }
 #foobar {
   width: 100%;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 #foobar .navigation {
   position: absolute;
@@ -54,7 +46,7 @@
   right: 20px;
 }
 #foobar .viewer {
-  width: 100%;
+  margin: 20px;
   padding-bottom: 100%;
   position: relative;
 }
