@@ -6,8 +6,6 @@ require_once 'components/header.php';
     <div id="page-bgtop">
         <div id="content">
             <div id="gallery-bg">
-                <div id="gallery-bgtop">
-                    <div id="gallery-bgbtm">
                         <div id="foobar">
                             <div class="navigation">
                                 <a href="#" class="previous">‹</a>
@@ -38,12 +36,8 @@ require_once 'components/header.php';
                                 speed: 600            
                             });
                         </script>
-                    </div>
-                </div>
             </div>
             <div class="post">
-                <div class="post-bgtop">
-                    <div class="post-bgbtm">
                         <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
                         <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
                         <div class="entry">
@@ -52,12 +46,8 @@ require_once 'components/header.php';
                         <div class="meta">
                             <p><a href="#" class="more">View More</a></p>
                         </div>
-                    </div>
-                </div>
             </div>
             <div class="post">
-                <div class="post-bgtop">
-                    <div class="post-bgbtm">
                         <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
                         <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
                         <div class="entry">
@@ -67,8 +57,6 @@ require_once 'components/header.php';
                             <p><a href="#" class="more">View More</a></p>
                         </div>
                     </div>
-                </div>
-            </div>
         </div>
         <?php require_once 'components/sidebar.php'; ?>
         <div style="clear:both; height: 1px"></div>
