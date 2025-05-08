@@ -1,49 +1,14 @@
 <?php
 require 'db_connect.php';
+require_once 'components/header.php';
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Banff Gift Shop</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link href="default.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript" src="jquery/jquery.slidertron-0.1.js"></script>
-	<style type="text/css">
-		@import "gallery.css";
-	</style>
-</head>
-
-<body>
-	<div id="wrapper">
-		<div id="header">
-			<div id="logo">
-				<h1><a href="#">Banff</a></h1>
-				<h2><a>Where every view is a postcard</a></h2>
-			</div>
-			<div id="menu">
-				<ul>
-					<li class="active"><a href="index.html">Homepage</a></li>
-					<li><a href="giftshop.php">Gift Shop</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="hiking.html">Hiking</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-		<div>
 			<div id="page">
 				<div class="inne_copy"></div>
 				<div id="page-bgtop">
 					<div id="content">
 
 						<div class="post">
-							<div class="post-bgtop">
-								<div class="post-bgbtm">
                     <?php
                     $id = $_POST['id'];
 
@@ -85,9 +50,6 @@ echo '<p>Leave a review?<p>';
                         <input type="hidden" name="id" value="<?php echo $row['PRD_ID']; ?>"></input>
                         <button type="submit">Submit</button>
                       </form>
-                    </div>
-
-                  </div>
                 </div><br>
               </div>
 
@@ -96,8 +58,6 @@ echo '<p>Leave a review?<p>';
 						</div>
 
 						<div class="post">
-							<div class="post-bgtop">
-								<div class="post-bgbtm">
 									<h2 class="title"><a href="#">Latest Reviews</a></h2>
                   
               <?php
@@ -133,13 +93,9 @@ echo '<p>Leave a review?<p>';
 									<div class="meta">
 										<p><a href="#" class="more">View More</a></p>
 									</div>
-								</div>
-							</div>
 						</div>
 
 						<div class="post">
-							<div class="post-bgtop">
-								<div class="post-bgbtm">
 									<h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
 									<p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
 									<div class="entry">
@@ -148,31 +104,13 @@ echo '<p>Leave a review?<p>';
 									<div class="meta">
 										<p><a href="#" class="more">View More</a></p>
 									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<!-- sidebar.php -->
-					<?php include ('sidebar.php'); ?>
+					<?php include ('components/sidebar.php'); ?>
 					<div style="clear:both; height: 1px"></div>
 				</div>
 			</div>
 		</div>
-		<div id="footer-wrapper">
-			<div id="footer">
-				<div class="fleft">
-					<p>Copyright statement.</p>
-				</div>
-				<div class="fright">
-					<p>My Website</p>
-				</div>
-				<div class="fcenter">
-					<p>Design by: My Website</p>
-				</div>
-				<div class="fclear"></div>
-			</div>
-		</div>
-</body>
 
-</html>
-
+<?php require_once 'components/footer.php'; ?>
