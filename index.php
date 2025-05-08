@@ -3,7 +3,6 @@ $page = 'index';
 require_once 'components/header.php';
 ?>
 <div id="page">
-    <div class="inne_copy"></div>
     <div id="page-bgtop">
         <div id="content">
             <div id="gallery-bg">
@@ -75,5 +74,4 @@ require_once 'components/header.php';
         <div style="clear:both; height: 1px"></div>
     </div>
 </div>
-
 <?php require_once 'components/footer.php'; ?>
