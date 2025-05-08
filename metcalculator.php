@@ -47,7 +47,7 @@ if (is_numeric($selectedHike)) {
 }
 ?>
 
-<div id="sidebar">
+<div class="post">
         <strong><label><?= $hikeName ?></label></strong><br/>
                 <table>
                     <tr>

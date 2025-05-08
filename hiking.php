@@ -116,18 +116,8 @@ function calculateInjuryProbability($difficulty, $hikeid, $lengthKM, $durationMi
                 ?>
             </div>
         </div>
-        <div class="post">
-            <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
-            <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
-            <div class="entry">
-                <p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris. Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing cursus vel, odio.</p>
-            </div>
-            <div class="meta">
-                <p><a href="#" class="more">View More</a></p>
-            </div>
-        </div>
-    </div>
     <?php include('metcalculator.php'); ?>
+    </div>
     <div style="clear:both; height: 1px"></div>
 </div>
 <?php require_once 'components/footer.php'; ?>

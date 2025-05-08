@@ -147,12 +147,38 @@ a:hover {
   font-size: 24px;
   font-weight: normal;
   color: #383b3f;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
+
+#menu a::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f40c42;
+  transition: top 0.3s ease;
+  z-index: -1;
+}
+
+#menu a:hover::before,
+#menu .active a::before {
+  top: 0;
+}
+
 #menu a:hover,
 #menu .active a {
-  background: #f40c42;
-  border-bottom: 10px solid black;
   color: #fff;
+  border-bottom: 10px solid black;
+}
+
+@media (max-width: 768px) {
+  #menu a::before {
+    display: none;
+  }
 }
 /* Search */
 #search {
@@ -485,4 +511,8 @@ select {
   width: 100%;
   padding: 5px 10px;
   margin: 20px 0 0 0;
+}
+
+.center-text {
+  text-align: center;
 }
