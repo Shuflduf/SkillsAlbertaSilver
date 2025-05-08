@@ -26,7 +26,7 @@
     }
 
     #header {
-        width: 100%;
+        width: 100svw;
         position: relative;
         padding: 0 10px;
         box-sizing: border-box;
@@ -43,19 +43,11 @@
     }
 
     .post {
-        width: 100%;
         box-sizing: border-box;
     }
 
     .post .entry {
         padding: 0;
-    }
-
-    #foobar {
-        width: 100% !important;
-        height: auto !important;
-        max-width: none;
-        margin: 0;
     }
 
     #menu {
@@ -120,7 +112,6 @@
     }
 
     .viewer {
-        width: 100% !important;
         padding-bottom: 100% !important;
         height: 0 !important;
         position: relative;

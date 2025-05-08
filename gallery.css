@@ -46,9 +46,12 @@
   right: 20px;
 }
 #foobar .viewer {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 20px;
+  margin-top: 0;
   padding-bottom: 100%;
   position: relative;
+  border-radius: 10px;
 }
 #foobar .viewer .reel {
   position: absolute;
