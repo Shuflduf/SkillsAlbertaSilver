@@ -211,7 +211,7 @@ a:hover {
 .post {
   background: white none repeat-x top;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 0 20px 0;
+  margin: 0 20px 20px;
   padding: 30px;
   border-radius: 10px;
 }
@@ -235,7 +235,10 @@ a:hover {
   font-size: 32px;
   color: #3a3d40;
 }
-.post .entry {
+.post .entry.about {
+  white-space: pre-wrap;
+  line-height: 1.4em;
+  font-size: 1.2em;
 }
 .post img {
   float: left;
@@ -273,6 +276,7 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 30px;
   font-size: 11px;
+  height: fit-content;
 }
 #sidebar-bgtop {
   background: url(images/img07.jpg) no-repeat left top;

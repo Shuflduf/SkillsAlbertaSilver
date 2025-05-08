@@ -21,7 +21,7 @@
         let timeHRS = timeMIN / 60;
         let caloriesBurned = met * (hikerWeightKG) * timeHRS;
 
-        let caloriesBurnedDisplay = `${caloriesBurned}` + " Calories Burned";
+        let caloriesBurnedDisplay = `${caloriesBurned.toFixed(0)}` + " Calories Burned";
 
         document.getElementById('caloriesBurned').innerText = caloriesBurnedDisplay;
     }
@@ -33,9 +33,8 @@ if (is_numeric($selectedHike)) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();  // get the first row only
+        $row = $result->fetch_assoc();  
 
-        // assign to variables
         $hikeName = $row['HIK_Name'];
         $hikeLengthKilometers = $row['HIK_LengthKilometers'];
         $hikeElevationGainMeters = $row['HIK_ElevationGainMeters'];
