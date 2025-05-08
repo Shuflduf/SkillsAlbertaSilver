@@ -1,5 +1,5 @@
 <?php
-require "db_connect.php";
+require "../scripts/db_connect.php";
 
 $stars = $_POST['stars'];
 $extra = '"'.$_POST['extra'].'"';
@@ -8,6 +8,6 @@ $time = time();
 
 $sql = 'INSERT INTO prd_reviews (STARS, EXTRA, TIME, PRD_ID) VALUES ('.$stars.','.$extra.','.$time.','.$id.')';
 $result = $conn->query($sql);
-header("Location: giftshop.php");
+header("Location: ../giftshop.php");
 exit();
 ?>

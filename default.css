@@ -37,22 +37,12 @@ h2,
 h3 {
   color: #aa2808;
 }
-h1 {
-}
-h2 {
-}
-h3 {
-}
 p,
 blockquote,
 ul,
 ol {
   margin-bottom: 20px;
   line-height: 2em;
-}
-p {
-}
-blockquote {
 }
 ul,
 ol,
@@ -111,6 +101,8 @@ a:hover {
 }
 .logo-image {
   height: 50px;
+  transform: none !important;
+  transition: none !important;
 }
 /* Menu */
 .flex {
@@ -138,7 +130,7 @@ a:hover {
   float: left;
   height: 55px;
   margin-right: 1px;
-  padding: 35px 20px 0 20px;
+  padding: 35px 20px 10px 20px;  /* added bottom padding */
   letter-spacing: -1px;
   text-decoration: none;
   text-align: center;
@@ -148,7 +140,6 @@ a:hover {
   font-weight: normal;
   color: #383b3f;
   position: relative;
-  overflow: hidden;
   transition: color 0.3s ease;
 }
 
@@ -160,6 +151,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background: #f40c42;
+  border-bottom: 10px solid black;
   transition: top 0.3s ease;
   z-index: -1;
 }
@@ -172,7 +164,6 @@ a:hover {
 #menu a:hover,
 #menu .active a {
   color: #fff;
-  border-bottom: 10px solid black;
 }
 
 @media (max-width: 768px) {
@@ -398,16 +389,17 @@ a:hover {
   gap: 10px;
 }
 
-/* gift shop entries */
-.product-entry {
-  display: flex;
-  padding: 20px;
-  margin-bottom: 0;
-  border-top: 1px dashed gray;
-  min-height: 300px;
-  gap: 20px;
+/* Global image styles */
+img {
+  transition: transform 0.3s ease;
+  display: block;
 }
 
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Product entry image adjustments */
 .product-entry img {
   width: 300px;
   height: 300px;
@@ -417,11 +409,14 @@ a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.product-entry .product-details {
-  flex: 1;
+/* gift shop entries */
+.product-entry {
   display: flex;
-  flex-direction: column;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 0;
+  border-top: 1px dashed gray;
+  min-height: 300px;
+  gap: 20px;
 }
 
 .product-entry h1 {
@@ -515,4 +510,7 @@ select {
 
 .center-text {
   text-align: center;
+}
+.gap-10 {
+  gap: 12px;
 }

@@ -16,7 +16,7 @@
     <div id="wrapper">
         <div id="header">
             <div id="logo">
-                <a href="index.php"><img src="images/logo.png" alt="Banff Gift Shop" class="logo-image" /></a>
+                <a href="index.php"><div class="img-wrapper"><img src="images/logo.png" alt="Banff Gift Shop" class="logo-image" /></div></a>
                 <h2><a>Where every view is a postcard</a></h2>
                 <button class="mobile-menu-button" aria-label="Toggle menu">☰</button>
             </div>

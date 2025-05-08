@@ -1,5 +1,5 @@
 ﻿<?php
-require 'db_connect.php';
+require 'scripts/db_connect.php';
 $page = 'giftshop';
 require_once 'components/header.php';
 ?>

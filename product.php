@@ -1,5 +1,5 @@
 <?php
-require 'db_connect.php';
+require 'scripts/db_connect.php';
 require_once 'components/header.php';
 ?>
 
@@ -35,7 +35,7 @@ echo '<h2>' . $row['PRD_Description'] . '</h2>';
 echo '<div class="latest-review">';
 echo '<p>Leave a review?<p>';
 ?>
-                      <form class="review-form" action="submit_review.php" method="POST">
+                      <form class="review-form" action="forms/submit_review.php" method="POST">
                         <select name="stars">
                           <option value="1">1 Star</option>
                           <option value="2">2 Stars</option>

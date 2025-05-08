@@ -1,7 +1,7 @@
 <?php
 $page = 'hiking';
 require_once 'components/header.php';
-require_once 'db_connect.php';
+require_once 'scripts/db_connect.php';
 
 function getBaseRisk($difficulty) {
     $baseRisk = [
@@ -41,7 +41,7 @@ function calculateInjuryProbability($difficulty, $hikeid, $lengthKM, $durationMi
     return max(0, min($riskScore, 1));
 }
 ?>
-<div id="page" class="flex">
+<div id="page" class="flex gap-10">
     <div id="content">
         <div class="post">
             <h2 class="title"><a href="#">Hiking Trails</a></h2>
@@ -116,8 +116,9 @@ function calculateInjuryProbability($difficulty, $hikeid, $lengthKM, $durationMi
                 ?>
             </div>
         </div>
-    <?php include('metcalculator.php'); ?>
+    <?php include('components/metcalculator.php'); ?>
     </div>
     <div style="clear:both; height: 1px"></div>
+    <?php include('components/sidebar.php'); ?>
 </div>
 <?php require_once 'components/footer.php'; ?>

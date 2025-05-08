@@ -36,6 +36,16 @@ require_once 'components/header.php';
                 });
             </script>
             <div class="post">
+                <h2 class="title"><a href="#">Coming Soon: Our New Jasper Location!</a></h2>
+                <p class="byline">Posted by <a href="#">Management</a> May 8, 2025</p>
+                <div class="entry">
+                    <p>We're thrilled to announce that <strong>Banff Gift Shop</strong> is expanding to beautiful Jasper, Alberta! Our new location, set to open this summer, will be nestled in the heart of downtown Jasper at <em>Patricia Street</em>. Like our Banff store, the Jasper location will feature our full range of locally-sourced products, mountain-inspired gifts, and authentic Canadian merchandise. The new space will also include a dedicated gallery showcasing works from <strong>local Jasper artists</strong>, celebrating the unique beauty of the northern Rockies. We can't wait to bring our commitment to quality and mountain culture to the Jasper community.</p>
+                </div>
+                <div class="meta">
+                    <p><a href="#" class="more">View More</a></p>
+                </div>
+            </div>
+            <div class="post">
                         <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
                         <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
                         <div class="entry">
@@ -45,16 +55,6 @@ require_once 'components/header.php';
                             <p><a href="#" class="more">View More</a></p>
                         </div>
             </div>
-            <div class="post">
-                        <h2 class="title"><a href="#">Lorem Ipsum Dolor Volutpat</a></h2>
-                        <p class="byline">Posted by <a href="#">Someone</a> April 22, 2010</p>
-                        <div class="entry">
-                            <p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris. Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing cursus vel, odio.</p>
-                        </div>
-                        <div class="meta">
-                            <p><a href="#" class="more">View More</a></p>
-                        </div>
-                    </div>
         </div>
         <?php require_once 'components/sidebar.php'; ?>
         <div style="clear:both; height: 1px"></div>
