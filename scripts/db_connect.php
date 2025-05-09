@@ -1,11 +1,12 @@
 <?php
-$servername = "192.168.101.58";
-$username = "skills";
-$password = "Vending1163";
-$database = "skills_db";
+$servername = "mysql-main-shuflduf.k.aivencloud.com";
+$port = 12102;
+$username = "avnadmin";
+$password = "AVNS_zjwLxP-AS9O5chX3093";
+$database = "defaultdb";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database, $port);
 
 // Check connection
 if ($conn->connect_error) {

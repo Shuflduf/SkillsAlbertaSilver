@@ -42,7 +42,7 @@ function calculateInjuryProbability($difficulty, $hikeid, $lengthKM, $durationMi
 }
 ?>
 <div id="page" class="flex gap-10">
-    <div id="content">
+    <div id="content" class="w-full">
         <div class="post">
             <h2 class="title"><a href="#">Hiking Trails</a></h2>
             <div class="entry">

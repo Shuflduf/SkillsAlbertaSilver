@@ -45,6 +45,7 @@
   #menu a:hover,
   #menu .active a {
     border-bottom: none;
+    background-color: #f40c42;
     border-right: 10px solid black;
   }
 
@@ -178,5 +179,9 @@
   .fcenter {
     width: 100%;
     margin: 5px 0;
+  }
+
+  #content.w-full {
+    width: 100%;
   }
 }

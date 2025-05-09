@@ -12,7 +12,7 @@ require_once 'components/header.php';
                         <div class="entry">
                             <?php
                             // Fetch product types
-                            $sql = "SELECT PRDTYP_ID, PRDTYP_Name FROM PRDTYP_ProductTypes";
+                            $sql = "SELECT PRDTYP_ID, PRDTYP_Name FROM prdtyp_producttypes";
                             $result = $conn->query($sql);
 
                             // Handle postback

@@ -19,8 +19,6 @@ require_once 'components/header.php';
                             $name = $onlyRow['PRD_Name'];
                             $row = $onlyRow;
                         }
-                    } else {
-                        echo 'no';
                     }
                     ?>
                     <h2 class="title"><a href="#">Item purchased</a></h2>
@@ -83,8 +81,6 @@ echo '<p>Leave a review?<p>';
                         echo '</li>';
                     }
                     echo '</ul>';
-                } else {
-                    echo 'no';
                 }
                     ?>
 

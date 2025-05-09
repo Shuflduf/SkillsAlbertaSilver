@@ -23,10 +23,10 @@
   font-size: 11px;
 }
 body {
-  background: #fff url(images/img01.jpg) repeat-x left top;
+  background: #222222;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 11px;
-  color: #757e82;
+  color: #b0b0b0;
 }
 * {
   margin: 0;
@@ -35,7 +35,7 @@ body {
 h1,
 h2,
 h3 {
-  color: #aa2808;
+  color: #ff4d4d;
 }
 p,
 blockquote,
@@ -53,17 +53,21 @@ li {
 }
 a {
   text-decoration: underline;
-  color: #f40c42;
+  color: #ff4d4d;
 }
 a:hover {
   text-decoration: none;
-  color: #f40c42;
+  color: #ff6666;
 }
 /* Header */
 #header {
-  width: 900px;
-  height: 140px;
+  width: 1000px;
+  min-height: 110px;
   margin: 0 auto;
+  margin-bottom: 20px;
+}
+#wrapper {
+  background-color: #2a2a2a;
 }
 /* Logo */
 #logo {
@@ -124,13 +128,14 @@ a:hover {
 #menu li {
   display: inline;
   text-align: center;
+  color: white;
 }
 #menu a {
   display: block;
   float: left;
   height: 55px;
   margin-right: 1px;
-  padding: 35px 20px 10px 20px;  /* added bottom padding */
+  padding: 35px 20px 10px 20px;
   letter-spacing: -1px;
   text-decoration: none;
   text-align: center;
@@ -138,9 +143,10 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: normal;
-  color: #383b3f;
+  color: white;
   position: relative;
   transition: color 0.3s ease;
+  z-index: 1;
 }
 
 #menu a::before {
@@ -221,8 +227,8 @@ a:hover {
   width: 630px;
 }
 .post {
-  background: white none repeat-x top;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   margin: 0 20px 20px;
   padding: 30px;
   border-radius: 10px;
@@ -245,7 +251,7 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 32px;
-  color: #3a3d40;
+  color: #ffffff;
 }
 .post .entry.about {
   white-space: pre-wrap;
@@ -263,7 +269,8 @@ a:hover {
   width: 115px;
   height: 32px;
   padding: 8px 0 0 0;
-  background: url(images/img12.jpg) no-repeat left top;
+  background: #2a2a2a;
+  border-radius: 5px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -284,8 +291,8 @@ a:hover {
   float: right;
   /* background: url(images/img08.jpg) repeat-y left top; */
   border-radius: 10px;
-  background: white none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   padding: 30px;
   font-size: 11px;
   height: fit-content;
@@ -300,7 +307,7 @@ a:hover {
 #sidebar ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style: circle;
   line-height: normal;
 }
 #sidebar li {
@@ -328,11 +335,11 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 180%;
   font-weight: normal;
-  color: #454e55;
+  color: #ffffff;
 }
 #sidebar h3 {
   font-size: 77%;
-  color: #454e55;
+  color: #b0b0b0;
 }
 #sidebar p {
   margin: 0;
@@ -341,11 +348,11 @@ a:hover {
 #sidebar a {
   border: none;
   text-decoration: none;
-  color: #757e82;
+  color: #b0b0b0;
 }
 #sidebar a:hover {
   text-decoration: underline;
-  color: #363636;
+  color: #ffffff;
 }
 /* Submenu */
 #submenu {
@@ -358,7 +365,7 @@ a:hover {
 }
 /* Footer */
 #footer-wrapper {
-  background: #f7f7f7 url(images/img03.jpg) repeat-x left top;
+  background: #333333;
   margin-top: 30px;
   padding: 20px;
   width: 100%;
@@ -414,7 +421,7 @@ img:hover {
   display: flex;
   padding: 20px;
   margin-bottom: 0;
-  border-top: 1px dashed gray;
+  border-top: 1px dashed #666;
   min-height: 300px;
   gap: 20px;
 }
@@ -450,7 +457,7 @@ select {
 .latest-review {
   margin: auto 0 0; 
   padding: 20px 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #444;
   text-align: center;
 }
 
@@ -496,7 +503,7 @@ select {
 /* hike */ 
 .hike-entry {
   padding: 20px;
-  border: 1px dashed gray;
+  border: 1px dashed #666;
   border-radius: 10px;
 }
 .hike-entry p {
