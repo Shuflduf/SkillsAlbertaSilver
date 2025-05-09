@@ -1,9 +1,14 @@
 <?php
-$servername = "mysql-main-shuflduf.k.aivencloud.com";
-$port = 12102;
-$username = "avnadmin";
-$password = "AVNS_zjwLxP-AS9O5chX3093";
-$database = "defaultdb";
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->safeLoad();
+
+$servername = $_ENV["SERVERNAME"];
+$port = $_ENV["PORT"];
+$username = $_ENV["USERNAME"];
+$password = $_ENV["PASSWORD"];
+$database = $_ENV["DATABASE"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database, $port);

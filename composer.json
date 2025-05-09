@@ -1,0 +1,19 @@
+{
+    "name": "shuflduf/skills-alberta-silver",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shuflduf\\SkillsAlbertaSilver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shuflduf",
+            "email": "shuflduf@shuflduf.xyz"
+        }
+    ]
+}
