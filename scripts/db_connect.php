@@ -1,9 +1,4 @@
 <?php
-require_once dirname(__DIR__) . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->safeLoad();
-
 $servername = $_ENV["SERVERNAME"];
 $port = $_ENV["PORT"];
 $username = $_ENV["USERNAME"];
