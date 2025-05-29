@@ -7,7 +7,7 @@ $id = $_POST['id'];
 $time = time();
 
 $sql = 'INSERT INTO prd_reviews (STARS, EXTRA, TIME, PRD_ID) VALUES ('.$stars.','.$extra.','.$time.','.$id.')';
-echo $sql;
+/* echo $sql; */
 $result = $conn->query($sql);
 header("Location: ../giftshop.php");
 exit();

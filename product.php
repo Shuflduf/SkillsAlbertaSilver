@@ -1,4 +1,6 @@
 <?php
+$page = 'store';
+
 require 'scripts/db_connect.php';
 require_once 'components/header.php';
 ?>

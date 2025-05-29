@@ -1,0 +1,29 @@
+services:
+  php:
+    build: .
+    ports:
+      - "8054:8054"
+    volumes:
+      - .:/app
+    depends_on:
+      - mariadb
+    environment:
+      - HOST=mariadb
+      - USERNAME=root
+      - PASSWORD=password
+      - DATABASE=website_database
+
+  mariadb:
+    image: mariadb:11
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      - MARIADB_DATABASE=website_database
+    ports:
+      - "3308:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+
+volumes:
+  mariadb_data:
