@@ -17,7 +17,6 @@
         if (backpackKG >= 5) met += 0.5;
         if (backpackKG >= 15) met += 0.5;
 
-        // Convert time from minutes to hours by dividing by 60
         let timeHRS = timeMIN / 60;
         let caloriesBurned = met * (hikerWeightKG) * timeHRS;
 
@@ -33,7 +32,7 @@ if (is_numeric($selectedHike)) {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();  
+        $row = $result->fetch_assoc();
 
         $hikeName = $row['HIK_Name'];
         $hikeLengthKilometers = $row['HIK_LengthKilometers'];
@@ -48,45 +47,45 @@ if (is_numeric($selectedHike)) {
 ?>
 
 <div class="post">
-        <strong><label><?= $hikeName ?></label></strong><br/>
-                <table>
-                    <tr>
-                        <td><label for="distance">Distance (km):</label></td>
-                        <td><input type="number" id="distance" name="distance" value="<?= $hikeLengthKilometers ?>"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="elevation">Elevation Gain (m):</label></td>
-                        <td><input type="number" id="elevation" name="elevation" value="<?= $hikeElevationGainMeters ?>"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="time">Time (min):</label></td>
-                        <td><input type="number" id="time" name="time" value="<?= $hikeTimeMinutes ?>"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="weight">Hiker's Weight (kg):</label></td>
-                        <td><input type="number" id="weight" name="weight"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="backpack">Backpack Weight (kg):</label></td>
-                        <td><input type="number" id="backpack" name="backpack"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" style="text-align: center;">
-                            <button 
-                            class="metcalc-button"
-                            onclick="estimateCalories(
+    <strong><label><?= $hikeName ?></label></strong><br />
+    <table>
+        <tr>
+            <td><label for="distance">Distance (km):</label></td>
+            <td><input type="number" id="distance" name="distance" value="<?= $hikeLengthKilometers ?>"></td>
+        </tr>
+        <tr>
+            <td><label for="elevation">Elevation Gain (m):</label></td>
+            <td><input type="number" id="elevation" name="elevation" value="<?= $hikeElevationGainMeters ?>"></td>
+        </tr>
+        <tr>
+            <td><label for="time">Time (min):</label></td>
+            <td><input type="number" id="time" name="time" value="<?= $hikeTimeMinutes ?>"></td>
+        </tr>
+        <tr>
+            <td><label for="weight">Hiker's Weight (kg):</label></td>
+            <td><input type="number" id="weight" name="weight"></td>
+        </tr>
+        <tr>
+            <td><label for="backpack">Backpack Weight (kg):</label></td>
+            <td><input type="number" id="backpack" name="backpack"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button
+                    class="metcalc-button"
+                    onclick="estimateCalories(
                             document.getElementById('distance').value, 
                             document.getElementById('elevation').value, 
                             document.getElementById('time').value, 
                             document.getElementById('weight').value, 
                             document.getElementById('backpack').value);">Calculate</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                        <label id="caloriesBurned"></label>
-                        </td>
-                    </tr>
-                </table>
-            
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="caloriesBurned"></label>
+            </td>
+        </tr>
+    </table>
+
 </div>
