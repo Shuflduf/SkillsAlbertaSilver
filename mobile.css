@@ -1,8 +1,8 @@
 .mobile-menu-button {
   display: none;
-  position: relative; /* Changed from absolute */
-  float: right; /* Added to align with header */
-  margin: 0 20px; /* Added margins */
+  position: relative;
+  float: right;
+  margin: 0 20px;
   font-size: 30px;
   cursor: pointer;
   background: none;
@@ -42,6 +42,7 @@
     margin: 0 20px;
     max-width: 1200px;
   }
+
   #menu a:hover,
   #menu .active a {
     border-bottom: none;
@@ -63,15 +64,16 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 80%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(8px);
   }
 
   #menu.active {
@@ -159,6 +161,7 @@
   #foobar .navigation .previous {
     left: 10px;
   }
+
   #foobar .navigation .next {
     right: 10px;
   }
@@ -166,6 +169,7 @@
   .product-entry {
     flex-direction: column;
   }
+
   .product-entry img {
     margin: 0 auto;
   }
@@ -174,6 +178,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .fleft,
   .fright,
   .fcenter {

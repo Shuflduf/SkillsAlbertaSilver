@@ -40,59 +40,60 @@ require_once 'components/header.php';
                     if (is_numeric($selectedType)) {
                         $sql = "SELECT * FROM prd_products WHERE PRDTYP_ID=" . $selectedType;
                     } else {
-                        $sql = "SELECT * from prd_products WHERE NOT PRDTYP_ID=0";
+                        $sql = "SELECT * from prd_products";
                     }
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
-                        while ($row = $result->fetch_assoc()) {
-                            $sql = "
+                        foreach ($result->fetch_assoc() as $row)
+                            while ($row = $result->fetch_assoc()) {
+                                $sql = "
                                     SELECT EXTRA, STARS
                                     FROM prd_reviews
                                     WHERE PRD_ID=" . $row["PRD_ID"] . "
                                     ORDER BY TIME DESC
                                     LIMIT 1 
                                     ";
-                            $reviewResult = $conn->query($sql);
+                                $reviewResult = $conn->query($sql);
 
-                            $sql = "
+                                $sql = "
                                     SELECT AVG(STARS) AS AVG_STARS
                                     FROM prd_reviews
                                     WHERE PRD_ID=" . $row["PRD_ID"] . "
                                     ";
-                            $avgResult = $conn->query($sql);
+                                $avgResult = $conn->query($sql);
 
-                            echo '<div class="product-entry">';
-                            echo '<img src="' . $row["PRD_ImagePath"] . '">';
-                            echo '<div class="product-details">';
-                            echo '<h1>' . $row["PRD_Name"] . '</h1>';
-                            echo '<h2>' . $row["PRD_Description"] . '</h2>';
-                            if ($avgResult->num_rows > 0) {
-                                $avg = $avgResult->fetch_assoc();
-                                $avgStars = $avg["AVG_STARS"];
-                                if ($avgStars !== null) {
-                                    $avgStars = round($avgStars, 1);
-                                    echo '<p class="center-text">Average: <b>' . $avgStars . '/5</b></p>';
+                                echo '<div class="product-entry">';
+                                echo '<img src="' . $row["PRD_ImagePath"] . '">';
+                                echo '<div class="product-details">';
+                                echo '<h1>' . $row["PRD_Name"] . '</h1>';
+                                echo '<h2>' . $row["PRD_Description"] . '</h2>';
+                                if ($avgResult->num_rows > 0) {
+                                    $avg = $avgResult->fetch_assoc();
+                                    $avgStars = $avg["AVG_STARS"];
+                                    if ($avgStars !== null) {
+                                        $avgStars = round($avgStars, 1);
+                                        echo '<p class="center-text">Average: <b>' . $avgStars . '/5</b></p>';
+                                    }
                                 }
+                                echo '<div class="latest-review">';
+                                if ($reviewResult->num_rows > 0) {
+                                    echo '<p>Latest Review<p>';
+                                    $review = $reviewResult->fetch_assoc();
+                                    $reviewText = $review["EXTRA"];
+                                    $stars = $review["STARS"];
+                                    echo '<b>' . $stars . '/5</b> - ' . $reviewText;
+                                } else {
+                                    echo '<p>No reviews yet</p>';
+                                }
+                                echo '</div>';
+                                echo '<form action="product.php" method="post">';
+                                echo '<input type="hidden" name="id" value="' . $row["PRD_ID"] . '"></input>';
+                                echo '<button type="submit">$' . $row["PRD_Price"] . '</button>';
+                                echo '</form>';
+                                echo '</div>';
+                                echo '</div><br>';
                             }
-                            echo '<div class="latest-review">';
-                            if ($reviewResult->num_rows > 0) {
-                                echo '<p>Latest Review<p>';
-                                $review = $reviewResult->fetch_assoc();
-                                $reviewText = $review["EXTRA"];
-                                $stars = $review["STARS"];
-                                echo '<b>' . $stars . '/5</b> - ' . $reviewText;
-                            } else {
-                                echo '<p>No reviews yet</p>';
-                            }
-                            echo '</div>';
-                            echo '<form action="product.php" method="post">';
-                            echo '<input type="hidden" name="id" value="' . $row["PRD_ID"] . '"></input>';
-                            echo '<button type="submit">$' . $row["PRD_Price"] . '</button>';
-                            echo '</form>';
-                            echo '</div>';
-                            echo '</div><br>';
-                        }
                     } else {
                         echo "No products found.";
                     }
